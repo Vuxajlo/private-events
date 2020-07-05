@@ -1,0 +1,11 @@
+
+<h1>Private Events</h1>
+<p id=”notice”><%= notice %></p>
+<% if loged_in? %>
+  Logged in as <%= current_user.name %>
+  <%= link_to "Logout", '/logout'%>
+<% else %>
+  <%= link_to "Login", '/login', method: :get%>
+  <%= link_to "Sign Up", '/users/new', method: :get%>
+ <% end %>
+
