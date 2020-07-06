@@ -1,1 +1,10 @@
-<h1>Show page</h1>
+<h1><%= @user.name %>'s Events</h1>
+<div>
+<ul>
+<% @user.events.all.each do |event| %>
+    <li>
+    <%= link_to event.title, event_path(event) %>
+    </li>
+<% end %>
+</ul>
+</div>
